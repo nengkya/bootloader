@@ -2,3 +2,6 @@
 .global init #makes "init" label available to the outside.
 			 #the standard would be "_start",
 			 #chose "init" to illustrate that we can call it anything.
+
+init:
+	jmp init
