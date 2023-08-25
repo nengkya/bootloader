@@ -4,9 +4,10 @@
 			 #chose "init" to illustrate that we can call it anything.
 
 init:
-	ljpmw $0xffff, $0		#jump to the "reset vector", doing a warm reboot
-							#physical address FFFF:0000
-							#https://en.wikipedia.org/wiki/Reset_vector
+	mov $0x0e41, %ax		#sets AH to 0xe (function teletype/write to screen).
+							#sets AL to 0x41 (ascii "A").
+	int $0x10
+	hlt						#halt until the next external interrupt is fired.
 
-.fill 510 - (.-init), 1, 0	#add zeroes to make it 510 bytes long
-.word 0xaa55				#magic bytes that tell BIOS that this is bootable
+.fill 510 - (.-init), 1, 0	#add zeroes to make it 510 bytes long.
+.word 0xaa55				#magic bytes that tell BIOS that this is bootable.
