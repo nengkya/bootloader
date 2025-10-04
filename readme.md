@@ -7,4 +7,7 @@ https://www.google.com/search?client=firefox-b-e&q=gnu+assembly+bootloader
 https://stackoverflow.com/questions/2120297/develop-a-bootloader-in-assembly  
 nasm -f bin bootloader.asm -o bootloader.bin  
 https://dev.to/frosnerd/writing-my-own-boot-loader-3mld  
-https://cs.lmu.edu/~ray/notes/nasmtutorial/
+https://cs.lmu.edu/~ray/notes/nasmtutorial/  
+  
+https://www.google.com/search?q=makefile&oq=makefile&gs_lcrp=EgZjaHJvbWUyBggAEEUYOdIBCDE1NzVqMGo3qAIAsAIA&sourceid=chrome&ie=UTF-8  
+https://makefiletutorial.com/
